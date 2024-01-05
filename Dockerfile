@@ -1,4 +1,4 @@
-FROM telethonArab/iqthon:slim-buster
+FROM albrans133/source:slim-buster
 
 RUN git clone https://github.com/albrans133/source.git /root/sourceklanr
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
