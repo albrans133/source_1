@@ -1,0 +1,68 @@
+{
+  "name": "⦿ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗮𝗟𝗕𝗥𝗮𝗡𝗦 ⦿",
+  "description": "8.3 V { @dev_albrans }",
+  "logo": "https://telegra.ph/file/970f332a7dde6971eccca.jpg",
+  "keywords": ["plugin","modular","productivity"],
+  "repository": "https://github.com/help-iq2/telethon",
+  "website": "#TODO",
+  "success_url": "#TODO",
+  "env": {
+    "ALIVE_NAME": {
+      "description": "ضع أسمك في التليجرام",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "ضع الأيبي ايدي", 
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "ضع الأيبي هاش",
+      "value": ""
+    },
+    "STRING_SESSION": {
+      "description": "ضع كود تيرمكس",
+      "value": ""
+    },
+    "TG_BOT_USERNAME": {
+      "description": "ضع معرف بوتك بدون @",
+      "value": ""
+    },
+    "TG_BOT_TOKEN": {
+      "description": "ضع توكن بوتك",
+      "value": ""
+    },
+    "COMMAND_HAND_LER": {
+      "description": "اتركة كما هوة او ضع الأمر الذي تريده بدلا من النقطة",
+      "value": "."
+    },
+    "TZ": {
+      "description": "ضع القاره / عاصمة بلدك ( اذا كنت لاتعرفه اتركة كما هوة )",
+      "value": "Asia/Baghdad",
+      "required": false
+    }
+  },
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "12"
+    }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/iq-thon/heroku-buildpack-ffmpeg-latest" 
+  },{    
+    "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+  },{
+    "url": "https://github.com/riganf/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
+    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "https://github.com/rahulps1000/heroku-buildpack-nodejs"
+  },{
+    "url": "heroku/python"
+  }],
+  "stack": "heroku-22"
+}
