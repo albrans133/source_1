@@ -1,5 +1,6 @@
 #!/bin/bash
 ##T.me/programer_senzir
+T.me/programer_senzir
 
 
 _get_ziplink () {
@@ -7,7 +8,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "albrans133" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi9pcXRob24vYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2FsYnJhbnMxMzMvc291cmNlL2FyY2hpdmUvbWFzdGVyLnppcA" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -17,7 +18,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi9pcXRob24vYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2FsYnJhbnMxMzMvc291cmNlL2FyY2hpdmUvbWFzdGVyLnppcA" | base64 -d
     fi
 }
 
@@ -27,12 +28,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "albrans133" ]]
     then
-        rlink=echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi9pcXRob24=" | base64 -d
+        rlink=echo "aHR0cHM6Ly9naXRodWIuY29tL2FsYnJhbnMxMzMvc291cmNl" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=echo "${UPSTREAM_REPO}"
     else
-        rlink=echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi9pcXRob24=" | base64 -d
+        rlink=echo "aHR0cHM6Ly9naXRodWIuY29tL2FsYnJhbnMxMzMvc291cmNl" | base64 -d
     fi
     echo "$rlink"
 }
